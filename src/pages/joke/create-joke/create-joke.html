@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Joke</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-textarea rows="4"
+                    type="text"
+                    placeholder="Setup"
+                    [(ngModel)]="setupProp"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea rows="4"
+                    type="text"
+                    placeholder="Punchline"
+                    [(ngModel)]="punchlineProp"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button
+          color="danger"
+          outline
+          (click)="create()"
+          [disabled]="setupProp?.length < 10 || punchlineProp?.length < 10">Create</button>
+
+</ion-content>
