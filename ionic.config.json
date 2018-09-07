@@ -1,0 +1,7 @@
+{
+  "name": "jokeApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
